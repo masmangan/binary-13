@@ -14,6 +14,7 @@ import org.junit.Test;
             boolean actual = tree.isEmpty();
 
             assertEquals(expected, actual);
+            assertEquals(0, tree.eval());
         }
 
         @Test
@@ -40,6 +41,7 @@ import org.junit.Test;
             String actual = tree.toString();
 
             assertEquals(expected, actual);
+            assertEquals(5, tree.eval());
         }
 
 
@@ -60,6 +62,7 @@ import org.junit.Test;
             String actual = tree.toString();
 
             assertEquals(expected, actual);
+            assertEquals(8, tree.eval());
         }
 
         @Test
@@ -94,6 +97,7 @@ import org.junit.Test;
             String actual = tree.toString();
 
             assertEquals(expected, actual);
+            assertEquals(25, tree.eval());
         }
 
         @Test
@@ -129,6 +133,7 @@ import org.junit.Test;
             String actual = tree.toString();
 
             assertEquals(expected, actual);
+            assertEquals(17, tree.eval());
         }
 
 
