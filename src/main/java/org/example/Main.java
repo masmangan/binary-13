@@ -55,15 +55,16 @@ class BinaryTree {
             return 0;
 
         if (node.left == null && node.right == null)
-            return Integer.valueOf(node.value);
+            return Integer.parseInt(node.value);
 
         if ("+".equals(node.value))
             return eval0(node.left)
                     + eval0(node.right);
 
-        if ("*".equals(node.value))
-            return eval0(node.left)
-                    * eval0(node.right);
+        //if ("*".equals(node.value))
+        return eval0(node.left)
+                * eval0(node.right);
+
     }
 
 
@@ -89,7 +90,7 @@ public class Main {
         tree.root = times;
 
         System.out.println(tree.isEmpty());
-        System.out.println(tree.toString());
+        System.out.println(tree);
         System.out.println(tree.eval());
     }
 }
