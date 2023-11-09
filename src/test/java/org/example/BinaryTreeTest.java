@@ -96,5 +96,41 @@ import org.junit.Test;
             assertEquals(expected, actual);
         }
 
+        @Test
+        public void checkToMirror() {
+            BinaryTree tree = new BinaryTree();
+
+            /**    root  ----+
+             *               |
+             *               v
+             *               +
+             *             /  \
+             *           2     *
+             *               /   \
+             *              3     5
+             *
+             *        2+(3*5)
+             */
+            Node plus = new Node("+");
+            Node two = new Node("2");
+            Node three = new Node("3");
+            Node times = new Node("*");
+            Node five = new Node("5");
+
+            plus.left = two;
+            plus.right = times;
+
+            times.left = three;
+            times.right = five;
+
+            tree.root = plus;
+
+            String expected = "2+(3*5)";
+            String actual = tree.toString();
+
+            assertEquals(expected, actual);
+        }
+
+
     }
 
